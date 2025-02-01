@@ -1,0 +1,141 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.App {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Стили формы логина */
+.login-form {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.login-form input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.login-form button {
+  padding: 10px;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-form button:hover {
+  background-color: #21bf57;
+}
+
+/* Стили чата */
+.chat {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+}
+
+.chat-header {
+  background-color: #075e54;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #054c45;
+}
+
+.chat-body {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.chat-footer {
+  padding: 10px 20px;
+  display: flex;
+}
+
+.chat-footer form {
+  display: flex;
+  flex: 1;
+  gap: 10px;
+}
+
+.chat-footer input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.chat-footer button {
+  padding: 10px 20px;
+  background-color: #25d366;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-footer button:hover {
+  background-color: #21bf57;
+}
+
+/* Стили сообщений */
+.message-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  overflow-y: auto;
+  height: 100%;
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* По умолчанию входящие сообщения слева */
+}
+
+.message-container.self {
+  align-items: flex-end; /* Исходящие сообщения справа */
+}
+
+.message {
+  padding: 10px;
+  border-radius: 15px;
+  max-width: 70%;
+  word-wrap: break-word;
+}
+
+.message.self {
+  background-color: #dcf8c6;
+  align-self: flex-end;
+}
+
+.message.other {
+  background-color: #e9ebef;
+  align-self: flex-start;
+}
